@@ -6,6 +6,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Mada&family=Montserrat&family=Poppins&family=Roboto&display=swap");
 
+nav{
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    width: 95vw;
+    z-index: 1;
+}
+
 .links > p {
   padding: 0px 20px;
   margin-top: 10px;
@@ -265,7 +273,7 @@
   }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 510px) {
   #menu {
     display: block;
   }

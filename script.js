@@ -130,6 +130,7 @@ const rad_1 = document.getElementById("rad-1");
 const rad_2 = document.getElementById("rad-2");
 const menu = document.getElementById("menu");
 const main = document.getElementsByTagName("main")[0];
+const navbar = document.getElementById("navbar");
 window.onload = renderData();
 
 function renderData(arr = foodItems) {
@@ -216,6 +217,8 @@ rad_2.addEventListener("click", () => {
   renderData(arr);
 });
 menu.addEventListener("click", () => {
+   main.removeChild(navbar);
+    
   main.style.filter = "brightness(50%)";
 
   const element = document.createElement("div");
@@ -233,6 +236,8 @@ menu.addEventListener("click", () => {
 });
 function closeBar() {
   const element = document.getElementsByClassName("burger-bar")[0];
-  main.style.filter = "brightness(100%)";
+  
   document.body.removeChild(element);
+  main.style.filter = "brightness(100%)";
+  main.prepend(navbar);
 }
